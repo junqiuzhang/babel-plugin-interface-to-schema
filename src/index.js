@@ -12,10 +12,7 @@ module.exports = function(babel) {
       },
       Program: {
         exit(path, state) {
-          if (!state.opts.entry) {
-            console.log('Error: No Entry!!!');
-            return;
-          }
+          var entry = state.opts.entry || 'IProps';
           var properties = [];
           function getProperties(inter) {
             // 递归获取
@@ -27,11 +24,10 @@ module.exports = function(babel) {
               properties = properties.concat(inter.body.body);
             }
           }
-          getProperties(_this[state.opts.entry]);
+          getProperties(_this[entry]);
           var jsonSchema = {
             Properties: properties.map(p => template(p)),
           };
-          console.log(properties);
           console.log(JSON.stringify(jsonSchema));
         }
       }

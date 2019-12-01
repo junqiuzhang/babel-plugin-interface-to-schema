@@ -1,31 +1,75 @@
 # Babel Plugin Interface To Schema
-a babel plugin that interface to schema
+a babel plugin that transform interface to schema
 ## Example
 **before:**
 
 ```
-export default (props) => {
-  const num = [1, 2, 3]
-  return <div>
-    {
-      num.map(o => {
-        return <Com num={o} />
-      })
-    }
-  </div>
+interface IGrandFather {
+  gra: number; // GrandFather
+}
+interface IFather extends IGrandFather {
+  fat: number; // Father
+}
+interface IProps extends IFather {
+  son: Array<number>; // Son
 }
 ```
 **after:**
 
 ```
-export default (props => {
-  const num = [1, 2, 3];
-  return <div>
-    {num.map((o, i) => {
-      return <Com num={o} key={i} />;
-    })}
-  </div>;
-});
+{
+  "Properties": [
+    {
+      "Name": "gra",
+      "Type": "number",
+      "Description": "GrandFather",
+      "Label": "GrandFather",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Input",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "fat",
+      "Type": "number",
+      "Description": "Father",
+      "Label": "Father",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Input",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "son",
+      "Type": "object",
+      "Description": "Son",
+      "Label": "Son",
+      "IsArray": true,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "jsType": "function",
+        "funcType": "event",
+        "cbParams": []
+      }
+    }
+  ]
+}
 ```
 
 ## Usage
@@ -34,8 +78,10 @@ export default (props => {
 ```
 {
   "plugins": [
-    "@babel/plugin-transform-react-jsx",
-    "./src/index.js"
+    "@babel/plugin-syntax-typescript",
+    ["./src/index.js", {
+      "entry": "IProps"
+    }]
   ]
 }
 ```
