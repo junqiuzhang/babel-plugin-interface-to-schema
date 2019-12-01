@@ -25,10 +25,10 @@ module.exports = function(babel) {
             }
           }
           getProperties(_this[entry]);
+          console.log(properties);
           var jsonSchema = {
             Properties: properties.map(p => template(p)),
           };
-          console.log(properties);
           console.log(JSON.stringify(jsonSchema));
         }
       }
