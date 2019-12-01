@@ -62,10 +62,12 @@ interface IProps extends IFather {
       "IsMetaDataType": false,
       "Version": null,
       "Extension": {
-        "editable": false,
-        "jsType": "function",
-        "funcType": "event",
-        "cbParams": []
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "TextArea",
+          "config": {}
+        }
       }
     }
   ]
@@ -79,9 +81,7 @@ interface IProps extends IFather {
 {
   "plugins": [
     "@babel/plugin-syntax-typescript",
-    ["./src/index.js", {
-      "entry": "IProps"
-    }]
+    "./src/index.js"
   ]
 }
 ```
