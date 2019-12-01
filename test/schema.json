@@ -1,0 +1,53 @@
+{
+  "Properties": [
+    {
+      "Name": "gra",
+      "Type": "number",
+      "Description": "GrandFather",
+      "Label": "GrandFather",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Input",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "fat",
+      "Type": "number",
+      "Description": "Father",
+      "Label": "Father",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Input",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "son",
+      "Type": "object",
+      "Description": "Son",
+      "Label": "Son",
+      "IsArray": true,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "jsType": "function",
+        "funcType": "event",
+        "cbParams": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "babel-plugin-interface-to-schema",
+  "version": "1.0.0",
+  "description": "babel plugin transform interface to schema",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "babel ./test/interface.ts -o ./test/interface.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junqiuzhang/babel-plugin-interface-to-schema.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junqiuzhang/babel-plugin-interface-to-schema/issues"
+  },
+  "homepage": "https://github.com/junqiuzhang/babel-plugin-interface-to-schema#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-syntax-typescript": "^7.7.4",
+    "braces": "^2.3.2"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "@babel/plugin-syntax-typescript",
+    ["./src/index.js", {
+      "entry": "IProps"
+    }]
+  ]
+}
