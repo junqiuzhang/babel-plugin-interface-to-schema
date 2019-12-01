@@ -35,11 +35,96 @@
       }
     },
     {
-      "Name": "son",
+      "Name": "str",
+      "Type": "string",
+      "Description": "string",
+      "Label": "string",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Input",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "num",
+      "Type": "number",
+      "Description": "number",
+      "Label": "number",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Input",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "boo",
+      "Type": "boolean",
+      "Description": "boolean",
+      "Label": "boolean",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "obj",
       "Type": "object",
-      "Description": "Son",
-      "Label": "Son",
+      "Description": "object",
+      "Label": "object",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "TextArea",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "arr",
+      "Type": "reference",
+      "Description": "Array",
+      "Label": "Array",
       "IsArray": true,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "editor": {
+          "type": "TextArea",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "fun",
+      "Type": "reference",
+      "Description": "Function",
+      "Label": "Function",
+      "IsArray": false,
       "IsMetaDataType": false,
       "Version": null,
       "Extension": {
@@ -47,6 +132,26 @@
         "jsType": "function",
         "funcType": "event",
         "cbParams": []
+      }
+    },
+    {
+      "Name": "func",
+      "Type": "function",
+      "Description": "Function",
+      "Label": "Function",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "jsType": "function",
+        "funcType": "event",
+        "cbParams": [
+          {
+            "name": "n",
+            "type": "number"
+          }
+        ]
       }
     }
   ]

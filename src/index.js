@@ -28,6 +28,7 @@ module.exports = function(babel) {
           var jsonSchema = {
             Properties: properties.map(p => template(p)),
           };
+          console.log(properties);
           console.log(JSON.stringify(jsonSchema));
         }
       }
