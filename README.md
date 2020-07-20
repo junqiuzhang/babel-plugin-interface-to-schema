@@ -4,74 +4,83 @@ a babel plugin that transform interface to schema
 **before:**
 
 ```
-interface IGrandFather {
-  gra: number; // GrandFather
-}
-interface IFather extends IGrandFather {
-  fat: number; // Father
-}
 interface IProps extends IFather {
-  son: Array<number>; // Son
+  boo: boolean; // boolean
+  num: number; // number
+  str: string; // string
+  obj: Object; // object
+  obj2: {
+    child: IChild;
+  };
+  arr: Array<boolean>; // Array
+  arr2: Array<IChild>;
+  arr3: Array<{
+    child: IChild;
+  }>;
+  fun: Function; // Function
+  fun2: (n: number) => void; // Function
+  child: IChild;
+}
+interface IChild {
+  name: string;
 }
 ```
 **after:**
 
 ```
 {
-  "Properties": [
+  "type": "object",
+  "title": "IProps",
+  "properties": [
+    { "title": "gra", "type": "number" },
+    { "title": "fat", "type": "number" },
+    { "title": "boo", "type": "boolean" },
+    { "title": "num", "type": "number" },
+    { "title": "str", "type": "string" },
+    { "title": "obj", "type": "object" },
     {
-      "Name": "gra",
-      "Type": "number",
-      "Description": "GrandFather",
-      "Label": "GrandFather",
-      "IsArray": false,
-      "IsMetaDataType": false,
-      "Version": null,
-      "Extension": {
-        "editable": true,
-        "jsType": "value",
-        "editor": {
-          "type": "Input",
-          "config": {}
+      "type": "object",
+      "properties": [
+        {
+          "title": "child",
+          "type": "object",
+          "properties": [{ "title": "name", "type": "string" }]
         }
+      ]
+    },
+    { "title": "arr", "type": "array", "items": { "type": "boolean" } },
+    {
+      "title": "arr2",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": [{ "title": "name", "type": "string" }]
       }
     },
     {
-      "Name": "fat",
-      "Type": "number",
-      "Description": "Father",
-      "Label": "Father",
-      "IsArray": false,
-      "IsMetaDataType": false,
-      "Version": null,
-      "Extension": {
-        "editable": true,
-        "jsType": "value",
-        "editor": {
-          "type": "Input",
-          "config": {}
-        }
+      "title": "arr3",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": [
+          {
+            "title": "child",
+            "type": "object",
+            "properties": [{ "title": "name", "type": "string" }]
+          }
+        ]
       }
     },
+    { "title": "fun", "type": "function" },
+    { "title": "fun2", "type": "function" },
     {
-      "Name": "son",
-      "Type": "object",
-      "Description": "Son",
-      "Label": "Son",
-      "IsArray": true,
-      "IsMetaDataType": false,
-      "Version": null,
-      "Extension": {
-        "editable": true,
-        "jsType": "value",
-        "editor": {
-          "type": "TextArea",
-          "config": {}
-        }
-      }
+      "title": "child",
+      "type": "object",
+      "properties": [{ "title": "name", "type": "string" }]
     }
   ]
 }
+
 ```
 
 ## Usage

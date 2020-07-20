@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-interface-to-schema",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "babel plugin transform interface to schema",
   "main": "./src/index.js",
   "scripts": {
