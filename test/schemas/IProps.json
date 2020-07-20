@@ -9,15 +9,44 @@
     { "title": "str", "type": "string" },
     { "title": "obj", "type": "object" },
     {
-      "title": "obj2",
       "type": "object",
-      "properties": [{ "title": "child", "type": "reference" }]
+      "properties": [
+        {
+          "title": "child",
+          "type": "object",
+          "properties": [{ "title": "name", "type": "string" }]
+        }
+      ]
     },
     { "title": "arr", "type": "array", "items": { "type": "boolean" } },
-    { "title": "arr2", "type": "array", "items": { "type": "reference" } },
-    { "title": "arr3", "type": "array", "items": { "type": "literal" } },
-    { "title": "fun", "type": "reference" },
+    {
+      "title": "arr2",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": [{ "title": "name", "type": "string" }]
+      }
+    },
+    {
+      "title": "arr3",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": [
+          {
+            "title": "child",
+            "type": "object",
+            "properties": [{ "title": "name", "type": "string" }]
+          }
+        ]
+      }
+    },
+    { "title": "fun", "type": "function" },
     { "title": "fun2", "type": "function" },
-    { "title": "child", "type": "reference" }
+    {
+      "title": "child",
+      "type": "object",
+      "properties": [{ "title": "name", "type": "string" }]
+    }
   ]
 }
