@@ -5,11 +5,22 @@ interface IFather extends IGrandFather {
   fat: number; // Father
 }
 interface IProps extends IFather {
-  str: string; // string
-  num: number; // number
   boo: boolean; // boolean
-  obj: object; // object
+  num: number; // number
+  str: string; // string
+  obj: Object; // object
+  obj2: {
+    child: IChild;
+  };
   arr: Array<boolean>; // Array
+  arr2: Array<IChild>;
+  arr3: Array<{
+    child: IChild;
+  }>;
   fun: Function; // Function
-  func: (n: number) => void; // Function
+  fun2: (n: number) => void; // Function
+  child: IChild;
+}
+interface IChild {
+  name: string;
 }

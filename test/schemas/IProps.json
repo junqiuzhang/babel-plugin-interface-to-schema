@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "title": "IProps",
+  "properties": [
+    { "title": "gra", "type": "number" },
+    { "title": "fat", "type": "number" },
+    { "title": "boo", "type": "boolean" },
+    { "title": "num", "type": "number" },
+    { "title": "str", "type": "string" },
+    { "title": "obj", "type": "object" },
+    {
+      "title": "obj2",
+      "type": "object",
+      "properties": [{ "title": "child", "type": "reference" }]
+    },
+    { "title": "arr", "type": "array", "items": { "type": "boolean" } },
+    { "title": "arr2", "type": "array", "items": { "type": "reference" } },
+    { "title": "arr3", "type": "array", "items": { "type": "literal" } },
+    { "title": "fun", "type": "reference" },
+    { "title": "fun2", "type": "function" },
+    { "title": "child", "type": "reference" }
+  ]
+}

@@ -1,6 +1,6 @@
 const { Type, TypeEditor } = require('./type');
 
-function getSchema(p) {
+function getPropertySchema(p) {
   var name = p.key.name;
   var type = p.typeAnnotation.typeAnnotation.type;
   var Comment = !!p.trailingComments ? p.trailingComments[0].value.trim() : '';
@@ -71,4 +71,4 @@ function getSchema(p) {
     Extension,
   }
 }
-module.exports = getSchema;
+module.exports = getPropertySchema;

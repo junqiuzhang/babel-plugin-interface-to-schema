@@ -1,21 +1,18 @@
-const Type = {
+const TS_TYPE = {
   TSBooleanKeyword: 'boolean',
   TSNumberKeyword: 'number',
   TSStringKeyword: 'string',
   TSFunctionType: 'function',
   TSObjectKeyword: 'object',
   TSTypeReference: 'reference',
+  TSTypeLiteral: 'literal'
 }
-const TypeEditor = {
-  TSBooleanKeyword: 'Switch',
-  TSNumberKeyword: 'Input',
-  TSStringKeyword: 'Input',
-  TSFunctionType: '',
-  TSObjectKeyword: 'TextArea',
-  TSTypeReference: 'TextArea',
+const JS_TYPE = {
+  Array: 'array',
+  Object: 'object'
 }
 module.exports = {
-  Type,
-  TypeEditor
+  TS_TYPE,
+  JS_TYPE
 }
   
