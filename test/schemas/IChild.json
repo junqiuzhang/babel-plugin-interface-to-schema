@@ -1,1 +1,5 @@
-{"type":"object","title":"IChild","properties":[{"title":"name","type":"string"}]}
+{
+  "type": "object",
+  "title": "IChild",
+  "properties": [{ "title": "name", "type": "string" }]
+}

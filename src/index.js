@@ -84,7 +84,7 @@ module.exports = function(babel) {
             interfaceSchema.set(key, getInterfaceSchema(value));
           })
           const filePath = parsingPath(state.file.opts.filename);
-          // output(filePath + '/interfaces/', interfacesDeclaration);
+          // output(filePath + '/asts/', interfacesDeclaration);
           output(filePath + '/schemas/', interfaceSchema);
         }
       }

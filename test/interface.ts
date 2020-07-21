@@ -1,14 +1,14 @@
-interface IGrandFather {
-  gra: number; // GrandFather
+interface IFather {
+  name: string; // Father
 }
-interface IFather extends IGrandFather {
-  fat: number; // Father
+interface IChild {
+  name: string;
 }
 interface IProps extends IFather {
   boo: boolean; // boolean
   num: number; // number
   str: string; // string
-  obj: Object; // object
+  obj: object; // object
   obj2: {
     child: IChild;
   };
@@ -18,9 +18,6 @@ interface IProps extends IFather {
     child: IChild;
   }>;
   fun: Function; // Function
-  fun2: (n: number) => void; // Function
+  fun2: (n: number) => void;
   child: IChild;
-}
-interface IChild {
-  name: string;
 }

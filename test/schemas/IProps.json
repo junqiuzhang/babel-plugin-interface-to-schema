@@ -2,29 +2,59 @@
   "type": "object",
   "title": "IProps",
   "properties": [
-    { "title": "gra", "type": "number" },
-    { "title": "fat", "type": "number" },
-    { "title": "boo", "type": "boolean" },
-    { "title": "num", "type": "number" },
-    { "title": "str", "type": "string" },
-    { "title": "obj", "type": "object" },
+    { 
+      "title": "name", 
+      "type": "string" 
+    },
+    { 
+      "title": "boo", 
+      "type": "boolean" 
+    },
+    { 
+      "title": "num", 
+      "type": "number" 
+    },
+    { 
+      "title": "str", 
+      "type": "string" 
+    },
+    { 
+      "title": "obj", 
+      "type": "object" 
+    },
     {
       "type": "object",
       "properties": [
         {
           "title": "child",
           "type": "object",
-          "properties": [{ "title": "name", "type": "string" }]
+          "properties": [
+            { 
+              "title": "name", 
+              "type": "string" 
+            }
+          ]
         }
       ]
     },
-    { "title": "arr", "type": "array", "items": { "type": "boolean" } },
+    { 
+      "title": "arr", 
+      "type": "array", 
+      "items": { 
+        "type": "boolean" 
+      } 
+    },
     {
       "title": "arr2",
       "type": "array",
       "items": {
         "type": "object",
-        "properties": [{ "title": "name", "type": "string" }]
+        "properties": [
+          { 
+            "title": "name", 
+            "type": "string" 
+          }
+        ]
       }
     },
     {
@@ -36,17 +66,33 @@
           {
             "title": "child",
             "type": "object",
-            "properties": [{ "title": "name", "type": "string" }]
+            "properties": [
+              { 
+                "title": "name", 
+                "type": "string" 
+              }
+            ]
           }
         ]
       }
     },
-    { "title": "fun", "type": "function" },
-    { "title": "fun2", "type": "function" },
+    { 
+      "title": "fun", 
+      "type": "function" 
+    },
+    { 
+      "title": "fun2", 
+      "type": "function" 
+    },
     {
       "title": "child",
       "type": "object",
-      "properties": [{ "title": "name", "type": "string" }]
+      "properties": [
+        { 
+          "title": "name", 
+          "type": "string" 
+        }
+      ]
     }
   ]
 }

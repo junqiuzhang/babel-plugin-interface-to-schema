@@ -1,9 +1,15 @@
 # Babel Plugin Interface To Schema
-a babel plugin that transform interface to schema
+a babel plugin that transform ts interface to schema
 ## Example
 **before:**
 
 ```
+interface IGrandFather {
+  gra: number; // GrandFather
+}
+interface IFather extends IGrandFather {
+  fat: number; // Father
+}
 interface IProps extends IFather {
   boo: boolean; // boolean
   num: number; // number
